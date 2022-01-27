@@ -1,6 +1,6 @@
 topic_banners:
   type: list
-  default: '/, 7|/c/lounge/4, 8'
+  default: '/, 7'
   description: |
     Each line should be in the format of "<code>relative url</code>, <code>topic-id</code>".<br/>
     <ul>
