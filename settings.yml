@@ -16,6 +16,10 @@ show_to_group:
   type: string
   default: ""
   description: "Show banners only to members of this group"
+show_to_visitors:
+  default: false
+  type: bool
+  description: "Show banners only to anonymous visitors. Group setting needs to be empty."
 below_site_header:
   default: false
   type: bool
