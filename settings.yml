@@ -20,18 +20,14 @@ show_to_visitors:
   default: false
   type: bool
   description: "Show banners only to anonymous visitors. Group setting needs to be empty."
-below_site_header:
-  default: false
-  type: bool
-  description: "Display banners on the below-site-header outlet"
-above_main_container:
-  default: false
-  type: bool
-  description: "Display banners on the above-main-container outlet"
-discovery_list_container_top:
-  default: true
-  type: bool
-  description: "Display banners on the discovery-list-container-top outlet"
+plugin_outlet:
+  type: enum
+  default: "above-main-container"
+  choices:
+    - "above-main-container"
+    - "below-site-header"
+    - "discovery-list-container-top"
+  description: "Advanced layout setting"
 show_url:
   type: bool
   default: false
