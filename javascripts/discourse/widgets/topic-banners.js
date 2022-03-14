@@ -42,7 +42,10 @@ createWidget("topic-banners", {
         if (hasGroup == false) return;
       }
     }
-
+    if (settings.show_to_visitors) {
+      const currentUser = getOwner(this).lookup("current-user:main");
+      if (currentUser !== null) return;
+    }
     if (settings.show_url) {
       console.log("Current URL: ", url);
     }
