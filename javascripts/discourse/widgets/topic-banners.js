@@ -33,12 +33,14 @@ createWidget("topic-banners", {
   html() {
     const router = getOwner(this).lookup("router:main");
     const url = router.currentURL;
-    
-    if(settings.show_to_group) {
-    const currentUser = getOwner(this).lookup("current-user:main");
-    if (currentUser == null) return;
-    const hasGroup = currentUser.groups.any(g => g.name === settings.show_to_group);
-    if (hasGroup == false) return;
+
+    if (settings.show_to_group) {
+      const currentUser = getOwner(this).lookup("current-user:main");
+      if (currentUser == null) return;
+      else {
+        const hasGroup = currentUser.groups.any((g) => g.name === settings.show_to_group);
+        if (hasGroup == false) return;
+      }
     }
 
     if (settings.show_url) {
